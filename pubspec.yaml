@@ -1,0 +1,20 @@
+name: dart_frog_utils
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+repository: https://github.com/Iconica-Development/dart_frog_utils
+
+publish_to: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
+
+environment:
+  sdk: ^3.0.0
+
+# Add regular dependencies here.
+dependencies:
+  dart_frog: ^1.0.0
+
+dev_dependencies:
+  test: ^1.24.0
+  flutter_iconica_analysis:
+    git:
+      url: https://github.com/Iconica-Development/flutter_iconica_analysis
+      ref: 7.0.0
