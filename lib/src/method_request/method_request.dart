@@ -28,6 +28,7 @@ Future<Response> methodRequest({
   if (handler == null) {
     throw MethodNotAllowedException(
       allowedMethods: allowedMethods.keys.asNameMap().keys.toList(),
+      disallowedMethod: requestContext.request.method.name,
     );
   }
 
