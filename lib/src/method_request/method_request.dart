@@ -9,9 +9,9 @@ Future<Response> methodRequest({
   Handler? post,
   Handler? patch,
   Handler? put,
+  Handler? delete,
   Handler? options,
   Handler? head,
-  Handler? delete,
 }) async {
   final allowedMethods = <HttpMethod, Handler>{
     if (get != null) HttpMethod.get: get,
