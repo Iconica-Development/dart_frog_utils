@@ -1,6 +1,6 @@
 name: dart_frog_utils
 description: A starting point for Dart libraries or applications.
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/Iconica-Development/dart_frog_utils
 
 publish_to: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
