@@ -265,6 +265,69 @@ class ValueValidator {
     };
   }
 
+  /// Creates a ValueValidator that validates a string to be a validate time
+  /// stamp in the format of HH:mm:ss or HH:mm
+  ///
+  /// Note that if [acceptSeconds] is true the inputted value can still ommit
+  /// the seconds. In that case the seconds should be considered set to 0.
+  ValueValidator.time({
+    this.optional = false,
+    this.jsonRepresentation = "String",
+    CustomValidator? validator,
+    bool acceptSeconds = true,
+  }) {
+    this.validator = validator ??
+        (value) {
+          if (value is! String) {
+            return "This field requires a String";
+          }
+
+          final splittedValues = value.split(":");
+
+          // First validate if the string is xx:xx:xx
+          if (splittedValues.length < 2) {
+            if (acceptSeconds) {
+              return "The value should be in the HH:mm or HH:mm:ss format";
+            }
+
+            return "The value should be in the HH:mm format";
+          }
+
+          if (acceptSeconds && splittedValues.length > 3) {
+            return "The value should be in the HH:mm:ss format";
+          }
+
+          // Secondly validate if the strings contains valid hours, minutes and
+          // optionally seconds
+          final hours = int.tryParse(splittedValues[0]);
+          final minutes = int.tryParse(splittedValues[1]);
+          if (hours == null || minutes == null) {
+            return "The value contains no valid hours or minutes";
+          }
+
+          if (hours >= 24 || hours < 0) {
+            return "There are only 24 hours in a day";
+          }
+
+          if (minutes >= 60 || minutes < 0) {
+            return "There are only 60 minutes in an hour";
+          }
+
+          if (splittedValues.length == 3 && acceptSeconds) {
+            final seconds = int.tryParse(splittedValues[2]);
+            if (seconds == null) {
+              return "The value contains no valid seconds";
+            }
+
+            if (seconds >= 60 || seconds < 0) {
+              return "There are only 60 seconds in a second";
+            }
+          }
+
+          return null;
+        };
+  }
+
   ///
   final bool optional;
 
