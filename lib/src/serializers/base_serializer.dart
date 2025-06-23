@@ -1,5 +1,6 @@
 import "package:dart_frog/dart_frog.dart";
 import "package:dart_frog_utils/dart_frog_utils.dart";
+import "package:dart_iconica_utilities/dart_iconica_utilities.dart";
 
 ///
 class Serializer<T> {
