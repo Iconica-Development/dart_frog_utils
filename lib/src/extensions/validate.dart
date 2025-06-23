@@ -4,6 +4,7 @@ import "package:dart_frog/dart_frog.dart";
 import "package:dart_frog_utils/src/exceptions/exceptions.dart";
 
 import "package:dart_frog_utils/src/request_validation/validate_request.dart";
+import "package:dart_iconica_utilities/dart_iconica_utilities.dart";
 
 ///
 extension RequestValidator on RequestContext {
