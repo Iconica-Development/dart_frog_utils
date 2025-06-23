@@ -80,6 +80,7 @@ mixin PostMixin on BaseView {
 
 ///
 mixin GetMixin on BaseView {
+  ///
   FutureOr<Response> get(RequestContext context);
 
   @override

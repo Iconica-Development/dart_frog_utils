@@ -1,4 +1,3 @@
-export "dart_utils/select_map.dart";
 export "exception_handling/exception_handler.dart";
 export "exceptions/exceptions.dart";
 export "extensions/method.dart";
