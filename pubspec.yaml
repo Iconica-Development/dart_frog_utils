@@ -1,6 +1,6 @@
 name: dart_frog_utils
 description: A starting point for Dart libraries or applications.
-version: 1.1.0
+version: 1.1.1
 repository: https://github.com/Iconica-Development/dart_frog_utils
 
 publish_to: https://forgejo.internal.iconica.nl/api/packages/internal/pub/
@@ -11,6 +11,9 @@ environment:
 # Add regular dependencies here.
 dependencies:
   dart_frog: ^1.0.0
+  dart_iconica_utilities:
+    hosted: https://forgejo.internal.iconica.nl/api/packages/internal/pub
+    version: ^0.0.2
 
 dev_dependencies:
   test: ^1.24.0
