@@ -7,6 +7,7 @@ export "package:dart_iconica_utilities/dart_iconica_utilities.dart"
     show
         CustomValidator,
         MapValidator,
+        Serializer,
         ValidationException,
         ValidatorJsonRepresentation,
         ValueValidator;
