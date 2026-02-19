@@ -1,3 +1,8 @@
+## 1.1.2
+
+- Move Serializer to seperate dart_iconica_utilities package
+
+
 ## 1.1.1
 
 - Move value validators to seperate dart_iconica_utilities package
