@@ -1,3 +1,7 @@
+## 1.1.3
+
+- Increment dart_iconica_utilities package to 0.0.4
+
 ## 1.1.2
 
 - Move Serializer to seperate dart_iconica_utilities package
