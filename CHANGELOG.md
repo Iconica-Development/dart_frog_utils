@@ -1,3 +1,7 @@
+## 1.1.4
+
+- Add a new extension on Middleware to select endpoints based on the request path and method.
+
 ## 1.1.3
 
 - Increment dart_iconica_utilities package to 0.0.4
